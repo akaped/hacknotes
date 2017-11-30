@@ -70,5 +70,11 @@ Netcat will not give us any feedback, but the file will be in the specified fold
 Check for file size matching before quitting the connection. 
 
 ## Remote administration with netcat
+Coming ... 
 
+### Binding shell 
 
+### Reverse shell
+
+## ncat and encrypted link between a server and a client (SSL)
+coming..
