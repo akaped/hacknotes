@@ -129,9 +129,7 @@ A binding shell can be enstablished in this way:
 
 
 ## ncat and encrypted link between a server and a client (SSL)
-[ncat](https://nmap.org/ncat/)
-
-Ncat was written for the nmap project as a much-improved reimplementation of netcat.
+[ncat](https://nmap.org/ncat/) was written for the nmap project as a much-improved reimplementation of netcat.
 Ncat is able to enstablish end-to-end encrypted connections between a client and a server (SSL), redirect TCP and UDP ports to other sites, proxy connections via SOCKS4 or HTTP proxies. 
 
 ### Use ncat with SSL to encrypt your bind or reverse shell.
