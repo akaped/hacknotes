@@ -1,4 +1,5 @@
 # Netcat - the hacker's swiss army knife
+![netcat](https://www.dropbox.com/s/um41q9zry0ktuo4/netcat_180.png?raw=1)
 
 Is a tool that can read and write to TCP and UDP ports (can act as client or server).
 
