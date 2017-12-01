@@ -70,9 +70,21 @@ Netcat will not give us any feedback, but the file will be in the specified fold
 Check for file size matching before quitting the connection. 
 
 ## Remote administration with netcat
-Coming ... 
+As we previously saw with netcat is possible to create a communication between a client and a server.
+This textual exchange of messages can be used to do command redirection.
+We can take an executable file and redirect the input, output, and error messages to a TCP/UDP port rather than the default console.
+There are two tipes of connection that can be enstablished, and it's really important to understand when one rather than the other should be  used. 
 
 ### Binding shell 
+A binding shell is enstablished when a server that has a public ip address opens a port to a client and binds a shell to that port.(fig.1)
+So when the client connects to this public address on this port it will be welcomed with the server command prompt.
+
+
+
+https://www.dropbox.com/s/ul38konoyhnx232/2017-12-01%2016.46.29.jpg?raw=1
+
+
+
 
 ### Reverse shell
 
