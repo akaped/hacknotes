@@ -9,8 +9,7 @@ Wireshark is a network sniffer and packet analiser that is able to trace the pac
 ## The interface 
 
 The interface of Wireshark after starting a capture looks like this: 
-![wireshark interface](https://www.dropbox.com/s/ui1av5zif0rur8g/wireshark.png?raw=1)
-
+![interface wireshark](https://www.dropbox.com/s/9q2lzw4kdf2tu92/B04965_02_06.jpg?raw=1)
 
 
 ## Filters 
@@ -194,6 +193,8 @@ There are two types of sniffing attacks:
 
 
 ### Analysing Network Reconnaissance techniques.
+
+
 
 
 
